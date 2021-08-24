@@ -3,6 +3,7 @@ import AppSlider from "./components/AppSlider/AppSlider";
 import Categories from "./components/Categories/Categories";
 import JumboHome from "./components/JumboHome/JumboHome";
 import axios from "axios";
+import Header from "./components/Header/Header";
 
 const categories = [
   {
@@ -70,12 +71,19 @@ const App = () => {
 
   return !loading ? (
     <>
+      <Header />
       <JumboHome />
       <div className="my-5">
         <AppSlider courses={courses} title="Students Are Viewing" />
       </div>
       <div className="my-5">
-        <AppSlider courses={courses} title="Best Seller" />
+        <AppSlider
+          courses={courses.filter(({ best }) => {
+            console.log(best);
+            return best;
+          })}
+          title="Best Seller"
+        />
       </div>
       <div className="my-5">
         <Categories categories={categories} />

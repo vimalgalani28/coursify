@@ -1,0 +1,19 @@
+.btn-outline {
+  color: var(--dark-text);
+  background-color: transparent;
+  border: 1px solid var(--dark-text);
+}
+
+.btn-outline:hover {
+  background-color: var(--light-grey);
+}
+
+.btn-dark {
+  background-color: var(--pure-black);
+  color: var(--pure-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--pure-black);
+  color: var(--pure-white);
+}

@@ -6,6 +6,10 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
 
 const Card = ({ course, shoverClass }) => {
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div className="card">
       <div className="img-container">
@@ -24,7 +28,9 @@ const Card = ({ course, shoverClass }) => {
           <p className="caption regular count ml-1">({course.ratingCount})</p>
         </div>
       </div>
-      <p className="paragraph1 py-1 bold price">{course.price}</p>
+      <p className="paragraph1 py-1 bold price">
+        {numberWithCommas(course.price)}
+      </p>
       {course.best && (
         <div className="flex mt-1">
           <p className="bestseller self-start caption regular py-1 px-2">
