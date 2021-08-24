@@ -1,0 +1,133 @@
+.img-container {
+  border: 1px solid var(--light-grey);
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-title {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  color: var(--dark-text);
+}
+
+.card-subtitle {
+  color: var(--pink);
+}
+
+.rating {
+  color: var(--green);
+}
+
+.count {
+  color: var(--pink);
+}
+
+.bestseller {
+  background-color: #eceb98;
+  color: #3d3c0a;
+}
+
+.price {
+  color: var(--dark-text);
+}
+
+.shover {
+  position: absolute;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  background: var(--pure-white);
+  width: 350px;
+  z-index: 1000 !important;
+  border: 1px solid var(--light-grey);
+  visibility: hidden;
+  white-space: normal;
+  transform: scale(0%);
+  cursor: text;
+}
+
+.card:hover .shover {
+  transition: 0.3s;
+  visibility: visible;
+  transform: scale(100%);
+}
+
+.cart-button {
+  background: var(--blue);
+  color: var(--pure-white);
+}
+
+.cart-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--pure-black);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--pure-white);
+  left: -15px;
+  top: 30%;
+  /* box-shadow: 0 2px 0px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%); */
+  transform: rotate(45deg);
+  border: 1px solid var(--light-grey);
+  border-top: none;
+  border-right: none;
+}
+
+.right {
+  top: 0%;
+  left: 105%;
+}
+
+.left {
+  top: 0%;
+  right: 105%;
+}
+
+.left::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--pure-white);
+  right: -15px;
+  top: 30%;
+  transform: rotate(45deg);
+  border: 1px solid var(--light-grey);
+  border-bottom: none;
+  border-left: none;
+}
+
+.bottom {
+  top: 105%;
+  left: 0%;
+}
+
+.bottom::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--pure-white);
+  left: 30%;
+  top: -15px;
+  transform: rotate(45deg);
+  border: 1px solid var(--light-grey);
+  border-bottom: none;
+  border-right: none;
+}

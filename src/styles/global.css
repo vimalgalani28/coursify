@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --light-grey: #d1d7dc;
+  --dark-text: #1c1d1f;
+  --green: #b4690e;
+  --pink: #6a6f73;
+  --blue: #a435f0;
+}
+
+body {
+  line-height: 1.6;
+  font-family: sf pro display, -apple-system, BlinkMacSystemFont, Roboto,
+    segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-size: 16px;
+  color: var(--pure-black);
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+
+.heading1 {
+  font-size: 61.04px;
+  line-height: 96px;
+}
+
+.heading2 {
+  font-size: 48.83px;
+  line-height: 72px;
+}
+
+.heading3 {
+  font-size: 39.06px;
+}
+
+.heading4 {
+  font-size: 31.25px;
+  line-height: 48px;
+}
+
+.heading5 {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.heading6 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.sub-heading {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.sub-heading-s {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.paragraph1 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.paragraph2 {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.paragraph3 {
+  font-size: 12.8px;
+  line-height: 16px;
+}
+
+.caption {
+  font-size: 10.24px;
+  line-height: 16px;
+}
+
+.serif {
+  font-family: Lora;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}

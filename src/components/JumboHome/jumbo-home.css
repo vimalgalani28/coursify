@@ -1,0 +1,17 @@
+.jumbo-home {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-box-container {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+.home-img {
+  height: 100%;
+  object-fit: cover;
+}
