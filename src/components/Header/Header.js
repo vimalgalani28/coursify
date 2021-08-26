@@ -1,19 +1,20 @@
 import { faShoppingCart, faWifi } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 import AppButton from "../Burron/AppButton";
 import "./header.css";
 
 const Header = () => {
   return (
-    <div className="header mb-2">
+    <div className="header">
       <div className="flex items-center px-6 h-16 justify-between">
-        <div className="logo">
+        <Link className="logo" to="/">
           <img
             src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
             alt="logo"
           />
-        </div>
+        </Link>
         <div className="flex items-center md:space-x-3 xs:space-x-2">
           <div>
             <div className="cart-header-icon heading6 regular">

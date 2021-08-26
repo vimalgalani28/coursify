@@ -4,14 +4,16 @@ import Ratinings from "../Ratings/Ratings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
+import { useHistory } from "react-router-dom";
 
 const Card = ({ course, shoverClass }) => {
+  const history = useHistory();
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   return (
-    <div className="card">
+    <div className="card" onClick={() => history.push(`/course/${course._id}`)}>
       <div className="img-container">
         <img
           className="w-full object-cover h-full"

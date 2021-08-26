@@ -46,3 +46,42 @@
 .header-shover-link {
   color: var(--dark-blue);
 }
+
+.course-header {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 16%);
+  color: var(--pure-white);
+  background-color: var(--dark-text);
+}
+
+.course-header .rating-header {
+  color: var(--cream);
+}
+
+.course-header .rating-count-header {
+  color: var(--light-blue);
+  text-decoration: underline;
+}
+
+.toggle {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  animation-name: opacity;
+  animation-duration: 0.5s;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .toggle {
+    display: none !important;
+  }
+}

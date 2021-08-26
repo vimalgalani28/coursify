@@ -19,6 +19,8 @@
   --blue: #a435f0;
   --dark-blue: #5624d0;
   --grey: #6a6f73;
+  --cream: #f3ca8c;
+  --light-blue: #cec0fc;
 }
 
 body {
@@ -53,7 +55,7 @@ button:disabled {
 
 .heading4 {
   font-size: 31.25px;
-  line-height: 48px;
+  line-height: 40px;
 }
 
 .heading5 {
@@ -63,7 +65,7 @@ button:disabled {
 
 .heading6 {
   font-size: 20px;
-  line-height: 32px;
+  line-height: 25px;
 }
 
 .sub-heading {
