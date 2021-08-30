@@ -11,7 +11,7 @@ const App = () => {
     const fetchCourses = async () => {
       const options = {
         method: "GET",
-        url: `http://localhost:5000/course/`,
+        url: `http://localhost:5000/courses/`,
       };
       try {
         const res = await axios(options);

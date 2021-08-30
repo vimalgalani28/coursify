@@ -36,7 +36,10 @@ const IndividualContent = ({ module, content, handleOpen }) => {
           />
         )}
         <p className="flex-1">{module.title}</p>
-        <p>{parseFloat(moduleDuration).toFixed(2)} sec</p>
+        <div className="flex gap-x-1">
+          <p>{parseFloat(moduleDuration).toFixed(2)} sec</p>
+          <p>{content.length} lectures</p>
+        </div>
       </div>
       {open && (
         <div className="flex flex-col gap-y-3 py-3 ">

@@ -8,9 +8,6 @@ import { useHistory } from "react-router-dom";
 
 const Card = ({ course, shoverClass }) => {
   const history = useHistory();
-  const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
 
   return (
     <div className="card" onClick={() => history.push(`/course/${course._id}`)}>
@@ -30,9 +27,6 @@ const Card = ({ course, shoverClass }) => {
           <p className="caption regular count ml-1">({course.ratingCount})</p>
         </div>
       </div>
-      <p className="paragraph1 py-1 bold price">
-        {numberWithCommas(course.price)}
-      </p>
       {course.best && (
         <div className="flex mt-1">
           <p className="bestseller self-start caption regular py-1 px-2">

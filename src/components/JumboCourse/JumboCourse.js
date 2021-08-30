@@ -68,9 +68,6 @@ const JumboCourse = ({ course, handleOpen }) => {
               <p className="play-text paragraph2 bold">Preview this course.</p>
             </div>
             <div className="flex flex-col gap-y-2 px-3 pb-3 mt-2">
-              <p className="heading5 bold" style={{ color: "#1c1d1f" }}>
-                ₹ {course.price}
-              </p>
               <button className="cart-button py-2">Add To Cart</button>
               <AppButton className="btn-outline">Buy Now</AppButton>
             </div>
