@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./card.css";
 import Ratinings from "../Ratings/Ratings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
 import { useHistory } from "react-router-dom";
+import { CoursifyContext } from "../../context/CoursifyContext";
 
 const Card = ({ course, shoverClass }) => {
   const history = useHistory();
+  const { user } = useContext(CoursifyContext);
+
+  const fromAdmin =
+    history.location.pathname.startsWith("/admin") && user.type === "admin";
 
   return (
-    <div className="card" onClick={() => history.push(`/course/${course._id}`)}>
+    <div
+      className="card"
+      onClick={() =>
+        fromAdmin
+          ? history.push(`/admin/course/${course._id}`)
+          : history.push(`/course/${course._id}`)
+      }
+    >
       <div className="img-container">
         <img
           className="w-full object-cover h-full"

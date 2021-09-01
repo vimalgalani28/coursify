@@ -1,12 +1,14 @@
 import { faShoppingCart, faWifi } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import AppButton from "../Burron/AppButton";
 import "./header.css";
 
 const Header = () => {
-  return (
+  const history = useHistory();
+  const admin = history.location.pathname.startsWith("/admin");
+  return !admin ? (
     <div className="header">
       <div className="flex items-center px-6 h-16 justify-between">
         <Link className="logo" to="/">
@@ -43,6 +45,8 @@ const Header = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <></>
   );
 };
 

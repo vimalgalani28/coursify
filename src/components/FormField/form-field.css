@@ -1,0 +1,20 @@
+.input-field {
+  width: 100%;
+  border: 1px solid var(--dark-text);
+  color: var(--dark-text);
+}
+
+.input-field:hover {
+  border: 1px solid var(--dark-text);
+  outline: none;
+}
+
+.input-field:focus {
+  border: 1px solid var(--dark-text);
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+}

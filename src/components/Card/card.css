@@ -1,5 +1,23 @@
 .img-container {
   border: 1px solid var(--light-grey);
+  position: relative;
+}
+
+.img-container .icon-container {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.img-container .icon-container > div {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: var(--pink);
+  font-size: 18px;
 }
 
 .card {
@@ -56,7 +74,11 @@
   visibility: visible;
   transform: scale(100%);
 }
-
+.card:hover .none {
+  transition: 0.3s;
+  visibility: hidden;
+  transform: scale(0%);
+}
 .cart-button {
   background: var(--blue);
   color: var(--pure-white);

@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import AdminLayout from "../components/Admin/Layout";
 import CourseContent from "../components/CourseContent/CourseContent";
 import CourseDescription from "../components/CourseDescription/CourseDescription";
 import CourseHeader from "../components/Header/CourseHeader";
@@ -8,24 +10,29 @@ import LearningOutcome from "../components/LearningOutcome/LearningOutcome";
 import PreviewModel from "../components/PreviewModel/PreviewModel";
 import { CoursifyContext } from "../context/CoursifyContext";
 
-const Course = (props) => {
-  const { courses, dispatchModules, lectures, dispatchLectures } =
+const AdminCourse = (props) => {
+  const { courses, dispatchModules, lectures, dispatchLectures, user } =
     useContext(CoursifyContext);
+  const history = useHistory();
+  const fromAdmin =
+    user.type === "admin" && history.location.pathname.startsWith("/admin");
   const course = courses.find((course) => course._id === props.match.params.id);
   const [open, setOpen] = useState(false);
   const [activeId, setActiveId] = useState();
   const handleScroll = () => {
-    const toggle = document.querySelector(".toggle");
-    const sticky = toggle.offsetTop;
-    if (window.scrollY >= 50) {
-      toggle.style.display = "block";
-    } else {
-      toggle.style.display = "none";
-    }
-    if (window.pageYOffset > sticky) {
-      toggle.classList.add("sticky");
-    } else {
-      toggle.classList.remove("sticky");
+    if (!fromAdmin) {
+      const toggle = document.querySelector(".toggle");
+      const sticky = toggle.offsetTop;
+      if (window.scrollY >= 50) {
+        toggle.style.display = "block";
+      } else {
+        toggle.style.display = "none";
+      }
+      if (window.pageYOffset > sticky) {
+        toggle.classList.add("sticky");
+      } else {
+        toggle.classList.remove("sticky");
+      }
     }
   };
   useEffect(() => {
@@ -64,8 +71,7 @@ const Course = (props) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-    // eslint-disable-next-line
-  }, [dispatchLectures, dispatchModules]);
+  }, [dispatchLectures, dispatchModules, handleScroll]);
 
   const handleOpen = (id) => {
     setActiveId(id);
@@ -74,7 +80,7 @@ const Course = (props) => {
   const handleClose = () => setOpen(false);
 
   return (
-    <>
+    <AdminLayout>
       <div>
         <div
           style={{
@@ -103,8 +109,8 @@ const Course = (props) => {
           setActiveId={setActiveId}
         />
       )}
-    </>
+    </AdminLayout>
   );
 };
 
-export default Course;
+export default AdminCourse;

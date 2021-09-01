@@ -17,3 +17,9 @@
   background-color: var(--pure-black);
   color: var(--pure-white);
 }
+
+.submit-button {
+  background: var(--dark-blue);
+  width: 100%;
+  color: var(--pure-white);
+}

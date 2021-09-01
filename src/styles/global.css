@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+ol,
+li {
+  list-style: disc;
+  list-style-position: inside;
+}
+
 :root {
   --pure-black: #000000;
   --pure-white: #ffffff;

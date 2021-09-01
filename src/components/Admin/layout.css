@@ -1,0 +1,9 @@
+.sidebar {
+  background: var(--dark-text);
+  color: var(--pure-white);
+}
+
+.mobile-header {
+  background: var(--dark-text);
+  color: var(--pure-white);
+}
